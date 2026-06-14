@@ -9,9 +9,8 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
 }
-
 // 1. Users Table - Main Users Table
 model User {
   id                     String    @id @default(uuid())
@@ -126,7 +125,7 @@ model BookSummary {
   bookId           Int      @unique @map("book_id")
   mainSummary      String?  @db.Text @map("main_summary") // Brief overview
   keyTakeaways     Json?    @map("key_takeaways") // Array of key points
-  fullSummary      String?  @db.LongText @map("full_summary") // Complete summary
+  fullSummary      String?  @db.Text @map("full_summary") // Complete summary
   tableOfContents  Json?    @map("table_of_contents") // Structured TOC
   createdAt        DateTime @default(now()) @map("created_at")
   updatedAt        DateTime @updatedAt @map("updated_at")
@@ -143,7 +142,7 @@ model BookChapter {
   bookId         Int      @map("book_id")
   chapterNumber  Int      @map("chapter_number")
   chapterTitle   String   @map("chapter_title")
-  chapterSummary String   @db.LongText @map("chapter_summary")
+  chapterSummary String   @db.Text @map("chapter_summary")
   audioUrl       String?  @map("audio_url")
   audioDuration  Int      @default(0) @map("audio_duration") // seconds
   displayOrder   Int      @default(0) @map("display_order")
