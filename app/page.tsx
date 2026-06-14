@@ -15,6 +15,20 @@ export default function HomePage() {
                 BookWise
               </span>
             </Link>
+            <div className="flex items-center space-x-6">
+              <Link
+                href="/login"
+                className="text-gray-700 hover:text-indigo-600 font-medium transition-colors"
+              >
+                Login
+              </Link>
+              <Link
+                href="/register"
+                className="px-6 py-2.5 bg-linear-to-r from-indigo-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition-all"
+              >
+                Get Started Free
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
