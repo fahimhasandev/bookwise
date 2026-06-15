@@ -149,6 +149,39 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* CTA */}
+      <section className="py-32 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+            Start Learning Today
+          </h2>
+          <p className="text-2xl text-indigo-100 mb-12 max-w-2xl mx-auto">
+            Join thousands growing their knowledge daily
+          </p>
+          <Link
+            href="/register"
+            className="inline-block px-12 py-6 bg-white text-indigo-600 text-xl rounded-xl font-bold shadow-2xl hover:shadow-white/30 transform hover:scale-105 transition-all"
+          >
+            Get Started Free
+          </Link>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-gray-400 py-16">
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex items-center justify-center space-x-3 mb-6">
+            <div className="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
+              <span className="text-white font-bold text-xl">B</span>
+            </div>
+            <span className="text-2xl font-bold text-white">BookWise</span>
+          </div>
+          <p className="mb-8 text-lg">
+            Learn from the world's best books in just 15 minutes.
+          </p>
+          <p className="text-sm">&copy; 2024 BookWise. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }
